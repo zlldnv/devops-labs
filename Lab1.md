@@ -7,7 +7,6 @@
 2. Develop and test a simple Python web application, that shows current time in Moscow.
 > Research and use best practices and prod ready frameworks. Use linters for Python and Markdown. Don't forget to test it, time must be updated with a page refreshing.
 3. Update a PYTHON.md file and describe all best practices that you could find. 
-> The more practices you will list the more points you will get.
 4. Remove content of README.md file with rules for the course and describe your application instead. Description should be in Markdown format.
 > Research and use any good template that you like.
 ## Bonus
