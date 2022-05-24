@@ -2,7 +2,6 @@
 
 ## Web application
 
-0. Register an AWS account if you don't have it. You will need it for next labs.
 1. Create `app_python` folder for your application and PYTHON.md inside.
 2. Develop and test a simple Python web application, that shows current time in Moscow.
 > Research and use best practices and prod ready frameworks. Use linters for Python and Markdown. Don't forget to test it, time must be updated with a page refreshing.
