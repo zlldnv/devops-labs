@@ -2,10 +2,39 @@
 
 ## Devops course web application
 
-## Prerequisites
+## Run locally
+
+### Prerequisites
+
+- `pip3` dependecy should be installed.
+  You can also check to see which version of pip3 is installed by entering: `pip3 --version`
+  Python 3.4+ in most operating systems includes pip3 by default. If your python version is less than 3.4, then you should upgrade your Python version which will automatically install pip3.
+  For example, you can install the latest version of Python from ActiveState (Python 3.9), which includes pip3.
+- `5000` port on your system should be free
+
+### Run App Scripts
+
+Invoke next scripts from the root folder of the repository
+
+```
+cd app_python/backend
+pip3 install --upgrade pip -r requirements.txt
+gunicorn main:"create_flask_app()" -b 0.0.0.0:5000 --reload
+```
+
+Open `http://localhost:5000` to view app in the browser.
+
+## Docker
+
+### Prerequisites
 
 Docker CLI installed : [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
 ## Launch
 
-`docker-compose up`
+Invoke next scripts from the root folder of the repository
+
+```
+cd app_python/backend
+docker-compose up
+```
