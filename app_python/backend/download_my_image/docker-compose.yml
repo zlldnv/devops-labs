@@ -1,0 +1,10 @@
+version: "3"
+services:
+  flask:
+    image: zalaldinov/devops-project-image:0.0.1
+    container_name: flask-backend
+    environment:
+      ## allows to debug the application using command line
+      - PYTHONUNBUFFERED=True                
+    ports:
+      - "5000:5000"
