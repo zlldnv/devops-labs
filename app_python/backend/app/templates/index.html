@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moscow time viewer</title>
+  </head>
+  <body>
+    <h2>Moscow time is: <span id="date"></span></h2>
+  </body>
+  <script>
+    const timeOptions = {
+      timeZone: "Europe/Moscow",
+      year: "numeric",
+      month: "long",
+      weekday: "long",
+      day: "numeric",
+      hour: "numeric",
+      hour12: false,
+      minute: "numeric",
+      second: "numeric",
+    };
+    const updateDate = () => {
+      const date = new Date().toLocaleString("en-US", timeOptions);
+      document.getElementById("date").innerHTML = date;
+    };
+    updateDate();
+    setInterval(updateDate, 1000);
+  </script>
+</html>

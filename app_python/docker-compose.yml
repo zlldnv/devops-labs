@@ -1,0 +1,26 @@
+version: '3'
+services:
+  flask:
+    # path to Dockerfile
+    build: ./backend
+    # Name for the container
+    container_name: backend-flask
+    # Env vars inside container
+    environment:
+      # Only for dev purposes
+      - FLASK_ENV=development
+      ## allows to debug the application using command line
+      - PYTHONUNBUFFERED=True                   
+      ##
+    # Restart policy: update on failure
+    restart: on-failure
+    # Make paths to files All the fules inside "./backend", 
+    # will appear in the directory of the container "/backend"
+    volumes:
+      - ./backend:/backend
+    # Open the port for the container
+    # Port which will be exposed : port which is used inside container
+    ports:
+      - "5000:5000"
+    #gunicorn invokes in file main.py, function create_flask_app using 0.0.0.0:5000 address
+    command: gunicorn main:"create_flask_app()" -b 0.0.0.0:5000 --reload
