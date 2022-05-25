@@ -21,6 +21,5 @@ services:
     # Open the port for the container
     # Port which will be exposed : port which is used inside container
     ports:
-      - "5000:5000"
-    #gunicorn invokes in file main.py, function create_flask_app using 0.0.0.0:5000 address
-    command: gunicorn main:"create_flask_app()" -b 0.0.0.0:5000 --reload
+      - "5000:5000"  
+  

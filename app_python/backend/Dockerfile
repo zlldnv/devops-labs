@@ -8,3 +8,5 @@ COPY . /backend
 RUN pip3 install --upgrade pip -r requirements.txt
 # set the port which will be used for the server
 EXPOSE 5000
+#gunicorn invokes in file main.py, function create_flask_app using 0.0.0.0:5000 address
+CMD ["sh", "-c", "gunicorn 'main:create_flask_app()' -b 0.0.0.0:5000 --reload"]
