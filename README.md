@@ -30,7 +30,7 @@ Grading is based on PRs with your solutions to the corresponding branch of this 
 1. Checkout the commit where you finished the previous lab
 2. Complete tasks of current lab
 3. Push the code to your repository
-4. **UPD.**. create new branch (called labN_submission) from main
+4. **UPD.** create new branch (called labN_submission) from main
 5. **UPD.** Create PR to labN branch on this repository from labN_submission
 6. Submit zip to moodle
 7. Wait for your grade
