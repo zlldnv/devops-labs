@@ -21,15 +21,17 @@ Grading is based on PRs with your solutions to the corresponding branch of this 
 2. Checkout master branch
 3. Complete lab1 tasks
 4. Push the code to your repository
-5. Create PR to lab1 branch on this repository
-6. Wait for your grade
+5. **UPD.** create new branch (called lab1_submission) from main
+6. **UPD.** Create PR to lab1 branch on this repository from lab1_submission
+7. Wait for your grade
 
 #### For all other labs
 1. Checkout the commit where you finished the previous lab
 2. Complete tasks of current lab
 3. Push the code to your repository
-4. Create PR to labN branch on this repository
-5. Wait for your grade
+4. **UPD.**. create new branch (called labN_submission) from main
+5. **UPD.** Create PR to labN branch on this repository from labN_submission
+6. Wait for your grade
 
 ## Grading 
 
@@ -39,7 +41,9 @@ Completing main tasks correctly will give you 10 points out of 10. Completing ex
 
 ## Deadlines and labs distribution
 
-Participants will be provided 2 labs simultaneously and have 1 week to submit solutions. Moodle will contain presentations and deadlines. Nothing is required to be submitted there.
+Participants will be provided 2 labs simultaneously and have 1 week to submit solutions. Moodle will contain presentations and deadlines. 
+
+**UPD.** You are required to submit zip file with your source code to corresponding assignment in moodle. This is required for the university as proof of work.
 
 ### Late submission policy
 
