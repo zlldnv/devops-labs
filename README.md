@@ -23,7 +23,8 @@ Grading is based on PRs with your solutions to the corresponding branch of this 
 4. Push the code to your repository
 5. **UPD.** create new branch (called lab1_submission) from main
 6. **UPD.** Create PR to lab1 branch on this repository from lab1_submission
-7. Wait for your grade
+7. Submit zip to moodle
+8. Wait for your grade
 
 #### For all other labs
 1. Checkout the commit where you finished the previous lab
@@ -31,7 +32,9 @@ Grading is based on PRs with your solutions to the corresponding branch of this 
 3. Push the code to your repository
 4. **UPD.**. create new branch (called labN_submission) from main
 5. **UPD.** Create PR to labN branch on this repository from labN_submission
-6. Wait for your grade
+6. Submit zip to moodle
+7. Wait for your grade
+
 
 ## Grading 
 
