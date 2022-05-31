@@ -20,6 +20,7 @@ Gunicorn is used as a dependency for this App. 'Green Unicorn' is a Python WSGI 
 
 ### Run App Scripts
 
+
 Invoke next scripts from the root folder of the repository
 
 ```
@@ -27,6 +28,7 @@ cd app_python/backend
 pip3 install --upgrade pip -r requirements.txt
 gunicorn main:"create_flask_app()" -b 0.0.0.0:5000 --reload
 ```
+
 
 Open `http://localhost:5000` to view app in the browser.
 
@@ -36,7 +38,9 @@ Open `http://localhost:5000` to view app in the browser.
 
 `0.0.1` [Image link](https://hub.docker.com/repository/docker/zalaldinov/devops-project-image)
 
+
 #### Pull image locally
+
 
 ```
 docker pull zalaldinov/devops-project-image
