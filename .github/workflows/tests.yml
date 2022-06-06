@@ -16,7 +16,7 @@ jobs:
           cache: "pip"
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip && pip install -r ${{ github.workspace }}/backend/requirements.txt
+          python -m pip install --upgrade pip && pip install -r ${{ github.workspace }}/app_python/backend/requirements.txt
       - name: Test with pytest
         run: |
-          pytest ${{ github.workspace }}/backend/testing
+          pytest ${{ github.workspace }}/app_python/backend/testing
