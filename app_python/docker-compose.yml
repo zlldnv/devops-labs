@@ -21,5 +21,6 @@ services:
     # Open the port for the container
     # Port which will be exposed : port which is used inside container
     ports:
-      - "5000:5000"  
+      - "5000:5000" 
+       
   

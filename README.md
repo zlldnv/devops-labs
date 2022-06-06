@@ -61,3 +61,19 @@ This project is linted locally using
 
 - `hadolint` : linter for dockerfile
 - `python` extension for VS code with build in linter
+
+## Testing
+
+To test the project you have to install `pytest` running
+
+```
+pip3 install pytest
+```
+
+Then just run
+
+```
+pytest testing
+```
+
+From `backend` folder
