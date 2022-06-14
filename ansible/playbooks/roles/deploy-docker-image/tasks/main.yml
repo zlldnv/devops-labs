@@ -1,0 +1,5 @@
+- name: Pull image from registry
+  shell: docker pull zalaldinov/devops-project-image:0.0.1
+
+- name: Run image
+  shell: docker run -p 8000:8000 zalaldinov/devops-project-image:0.0.1
