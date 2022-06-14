@@ -1,0 +1,8 @@
+#cloud-config
+users:
+  - name: zalaldinov
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC9cQ3SdeDOSdEmqaE1GtAmny32WGLkij1x3kQwETkL45Vn7V+NP30x4XYfTK1pXx/3yXADmfn5ZwEX8MzYTWWcodmnX8HBTv7NBFvuTkw1laXdU8v3K6G1VBzjehEAtleEuKy1xBODgIvRcjpEFsEQE06IteAN2AV9gUR0CcD43+sKHG76NUXgVzJaIz079hZN1f0CpcHp0ZCuFwwQfPRMtBGUk3gGqXM/EUSiW/zfcBKCS2lGQNQWzlwtcJXTlNKWllh7eDk/wNj4M6t8e4W1xaCjZFvdhwKa/C4JvD/cJ5EhuedA5Wqyw7PuxvcnQDLuL3SqQQxd5Ef03J/OjIU0grHusMB1Nf0txFLnWEUSI20SythznrumEv8XyoBcXaJEKGgH6ogJU0MMbOCrVb+jjXqKqjLtQ2jS9BjDiWZVDyyP+LXLlkniOri+V/AIdcMGg7wbfbXU+I1K4PBPLrVK3r+g7shtE39nyN0NY/uJwmAhOQTEdNLZKgwTYP++/828HS5GOUtGWRLSvG6vFCsCXvm5zuxa1Tj2gs5h7VrUnYxNlMG+i1teFdYopFo4OUPVSaINN6hR7L8aGUXVxbOvPhhhk20JSIRVDjaH1J5Ix5Ot/xDSpiLifk0NScE/AtQlbWEPxX9dDmkPCF2Gr/89wvff0o1zNNwMlPC1VinWTQ== antonzalaldinov@reddit

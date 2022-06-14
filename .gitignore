@@ -1,1 +1,6 @@
 __pycache__
+ansible/roles
+terraform/.terraform
+*secret*
+.terraform
+secret.tfvars
