@@ -4,7 +4,7 @@
 
 ## Dashboard for Loki
 
-![LokiDashboard](../screenshots/Loki dashboard.jpg)
+![LokiDashboard](../screenshots/Loki-dashboard.jpg)
 
 ## Dashboard for Prometheus
 
