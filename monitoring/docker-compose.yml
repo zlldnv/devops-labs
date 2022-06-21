@@ -4,6 +4,7 @@ volumes:
   grafana-data: {}
   loki-data: {}
   promtail-data: {}
+  prometheus-data: {}
 
 networks:
   logging:
@@ -32,6 +33,12 @@ services:
       - grafana-data:/var/lib/grafana
     networks:
       - logging
+    logging:
+        driver: "json-file"
+        options:
+          max-file: "5"
+          max-size: "100m"
+    mem_limit: 256m
 
  
 
@@ -51,7 +58,37 @@ services:
     command: -config.file=/etc/promtail/promtail.yml
     networks:
       - logging
+    logging:
+        driver: "json-file"
+        options:
+          max-file: "5"
+          max-size: "100m"
+    mem_limit: 256m
 
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: monitoring.prometheus
+    volumes:
+      - ${PWD}/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./prometheus/data:/prometheus:rw
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+    restart: unless-stopped
+    expose:
+      - 9090
+    ports:
+      - "9090:9090"
+    networks:
+      - logging
+    logging:
+        driver: "json-file"
+        options:
+          max-file: "5"
+          max-size: "100m"
+    mem_limit: 256m
+
+
+  
   loki:
     image: grafana/loki:latest
     container_name: monitoring.loki
@@ -63,5 +100,11 @@ services:
     command: -config.file=/etc/loki/local-config.yaml
     networks:
       - logging
+    logging:
+        driver: "json-file"
+        options:
+          max-file: "5"
+          max-size: "100m"
+    mem_limit: 256m
        
   
