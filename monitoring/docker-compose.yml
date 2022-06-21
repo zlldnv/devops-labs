@@ -1,0 +1,67 @@
+version: '3'
+
+volumes:
+  grafana-data: {}
+  loki-data: {}
+  promtail-data: {}
+
+networks:
+  logging:
+
+services:
+  flask:
+    image: zalaldinov/devops-project-image:0.0.4
+    container_name: flask-backend
+    environment:
+      ## allows to debug the application using command line
+      - PYTHONUNBUFFERED=True                
+    ports:
+      - "5000:5000"
+    volumes:
+      - ${PWD}/log:/var/log
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: monitoring.grafana
+    ports:
+      - "3000:3000"
+    expose:
+      - 3000
+    restart: unless-stopped
+    volumes:
+      - grafana-data:/var/lib/grafana
+    networks:
+      - logging
+
+ 
+
+  promtail:
+    image: grafana/promtail:latest
+    container_name: monitoring.promtail
+    ports:
+      - "9080:9080"
+    expose:
+      - 9080
+    restart: unless-stopped
+    volumes:
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - ${PWD}/log:/var/log
+      - ${PWD}/promtail/promtail.yml:/etc/promtail/promtail.yml
+      - promtail-data:/var/lib/promtail/positions
+    command: -config.file=/etc/promtail/promtail.yml
+    networks:
+      - logging
+
+  loki:
+    image: grafana/loki:latest
+    container_name: monitoring.loki
+    ports:
+      - "3100:3100"
+    expose: 
+      - 3100
+    restart: unless-stopped
+    command: -config.file=/etc/loki/local-config.yaml
+    networks:
+      - logging
+       
+  
