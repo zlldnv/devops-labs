@@ -1,3 +1,5 @@
+# Lab 9
+
 ```
 antonzalaldinov@Antons-MacBook-Pro devops-labs % kubectl get pods,svc
 NAME                                                 READY   STATUS    RESTARTS   AGE
@@ -36,3 +38,15 @@ antonzalaldinov@Antons-MacBook-Pro devops-labs % minikube service --all
 ```
 
 ![screenshot](../screenshots/lab9.jpg)
+
+# Lab 10
+
+```
+antonzalaldinov@Antons-MacBook-Pro k8s % kubectl get pods,svc
+NAME                                     READY   STATUS    RESTARTS   AGE
+pod/moscow-time-viewer-766694d55-vsc9l   1/1     Running   0          24s
+
+NAME                         TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes           ClusterIP   10.96.0.1      <none>        443/TCP   6m48s
+service/moscow-time-viewer   ClusterIP   10.110.116.7   <none>        80/TCP    24s
+```
