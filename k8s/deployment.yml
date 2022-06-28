@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: moscow-time-viewer-deployment
+  labels:
+    app: moscow-time-viewer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: moscow-time-viewer
+  template:
+    metadata:
+      labels:
+        app: moscow-time-viewer
+    spec:
+      containers:
+        - name: moscow-time-viewer
+          image: zalaldinov/devops-project-image:0.0.1
+          ports:
+            - containerPort: 5000
