@@ -4,14 +4,13 @@ from flask import Flask
 
 from app.routes import route
 from app.config import config, init_config
-from app.logging import init_logs
 
 
 def create_flask_app():
     app = Flask(__name__)
 
     route(app)
-    init_logs(app)
+
     path = os.environ.get('CONFIG_PATH') if os.environ.get(
         'CONFIG_PATH') else "./settings.ini"
     init_config(path)
