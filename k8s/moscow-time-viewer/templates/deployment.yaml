@@ -45,6 +45,19 @@ spec:
           #   httpGet:
           #     path: /
           #     port: http
+          env:
+          - name: DATABASE_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: db-user-pass
+                key: username
+                optional: false
+          - name: DATABASE_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: db-user-pass
+                key: password
+                optional: false
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
